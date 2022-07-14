@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
 
-function App() {
+const App = () => {
+  const [photo, setPhoto] = useState([]);
+  const API_KEY = "563492ad6f91700001000001c2e888caef804335992fbce4dee8cefd";
+  const API = `https://api.pexels.com/v1/curated`;
+  useEffect(() => {
+    async function defaultPhotos() {
+      const data = await fetch(API, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          Authorization: API_KEY,
+        },
+      });
+      const response = await data.json();
+      console.log(response);
+    }
+    defaultPhotos();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      
+    </>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,46 @@
+.navbar {
+  width: 100vw;
+  height: 70px;
+  background-color: #232a34;
+  display: flex;
+  justify-content: space-between;
+  .logo,
+  .admin {
+    height: 100%;
+  }
+  .logo img,
+  .admin img {
+    height: 100%;
+    object-fit: cover;
+    padding: 0.7rem;
+    border-radius: 20px;
+  }
+  .src {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 750px;
+    width: 100%;
+    min-height: 66px;
+  }
+  .src input {
+    width: 100%;
+    font-size: 17px;
+    padding: 0.5rem;
+    font-weight: 300;
+    border: none;
+    background-color: #e4e4e4;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .src_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 35.5px;
+    padding: 0.4rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
