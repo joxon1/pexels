@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import axios from "axios";
 import { API_KEY, API_URL } from "./api";
+import { Routes, Route } from "react-router-dom";
 const App = () => {
   const [value, setValue] = useState("");
   const [result, setResult] = useState([]);
@@ -22,7 +23,10 @@ const App = () => {
   return (
     <>
       <Navbar srchPhoto={srchPhoto} getImg={getImg} />
-      <Home result={result} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
     </>
   );
 };
