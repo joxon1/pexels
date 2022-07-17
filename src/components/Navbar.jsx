@@ -3,6 +3,7 @@ import logo from "../assets/logo.jpg";
 import logo_rj from "../assets/logo_rj.jpg";
 import { BsSearch } from "react-icons/bs";
 import "./Navbar.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ srchPhoto, getImg }) => {
   return (
@@ -19,7 +20,9 @@ const Navbar = ({ srchPhoto, getImg }) => {
         <BsSearch className="src_icon" type="submit" onClick={getImg} />
       </div>
       <div className="admin">
-        <img src={logo_rj} alt="RJ" />
+        <a href="http://joxon1.github.io/portfolio" target="_blank">
+          <img src={logo_rj} alt="RJ" />
+        </a>
       </div>
     </div>
   );

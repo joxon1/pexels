@@ -7,6 +7,7 @@
   .logo,
   .admin {
     height: 100%;
+    cursor: pointer;
   }
   .logo img,
   .admin img {
@@ -48,7 +49,7 @@
     .admin {
       display: none;
     }
-    .src{
+    .src {
       padding: 0 0.5rem;
     }
   }
